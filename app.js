@@ -1,0 +1,13 @@
+const express = require('express');
+const app = express();
+const db = require('./db');
+const UserController = require('./user/UserController');
+app.use('/users', UserController);
+// app.get('/',(req,res)=>{
+//     res.send('u are welcome');
+// });
+// const port = 3000;
+// app.listen(port,()=>{
+//     console.log(`our port is listening to ${port}`)
+// });
+module.exports = app;
